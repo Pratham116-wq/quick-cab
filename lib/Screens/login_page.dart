@@ -3,11 +3,9 @@ import 'package:cab_tab/Screens/registeration_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
-
 import '../Constants/contants.dart';
 import '../Widgets/TextField.dart';
 import '../Widgets/custom_button_orange.dart';
-import 'otp_verification.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -45,8 +43,8 @@ class _LoginPageState extends State<LoginPage> {
                         borderRadius: BorderRadius.circular(26),
                       ),
                     ),
-                    SizedBox(height: 5),
-                    Text(
+                    const SizedBox(height: 5),
+                    const Text(
                       Constants.appName,
                       style: TextStyle(
                         fontWeight: FontWeight.w600,
@@ -56,7 +54,7 @@ class _LoginPageState extends State<LoginPage> {
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 55,
               ),
               Container(
@@ -103,7 +101,7 @@ class _LoginPageState extends State<LoginPage> {
                           child: Column(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              SizedBox(
+                              const SizedBox(
                                 height: 47,
                               ),
                               loginform(),
@@ -133,7 +131,7 @@ class _LoginPageState extends State<LoginPage> {
         CustomTextInputField(
           "Phone",
           "Please Enter Your Phone",
-          Icon(Icons.phone_android),
+          const Icon(Icons.phone_android),
           TextInputType.phone,
           false,
               (value) {
@@ -145,13 +143,13 @@ class _LoginPageState extends State<LoginPage> {
             return null;
           },
         ),
-        SizedBox(
+        const SizedBox(
           height: 20,
         ),
         CustomTextInputField(
           "Password",
           "Please Enter Your Password",
-          Icon(Icons.lock),
+          const Icon(Icons.lock),
           TextInputType.visiblePassword,
           true,
               (value) {
@@ -180,19 +178,19 @@ class _LoginPageState extends State<LoginPage> {
             }
           },
         ),
-        SizedBox(
+        const SizedBox(
           height: 5,
         ),
         GestureDetector(
           onTap: () {
-            Get.to(RegistrationsPage());
+            Get.to(const RegistrationsPage());
 
           },
           child: RichText(
             text: TextSpan(
                 text: "",
                 children: <TextSpan>[
-                  TextSpan(
+                  const TextSpan(
                     text: 'Dont have and account',
                     style: TextStyle(
                       color: Colors.black,

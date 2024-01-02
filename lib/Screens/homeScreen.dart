@@ -25,10 +25,14 @@ List<String> helo = [
 List<String> title = [
   "Cab",
   "Restuarants",
-  "trials",
-  "Hotels ",
-  "Salon",
-  "Plumber",
+  "Hotels",
+  "Towing",
+  "Puncture",
+  "Reparing",
+  "Drivers",
+  "Fuels",
+  "Hospitals",
+
 ];
 
 class _HomePageState extends State<HomePage> {
