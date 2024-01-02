@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.routes,
       initialRoute: AppPages.INITIAL_ROUTE,
       debugShowCheckedModeBanner: false,
-      title: 'Quick Tab',
+      title: 'Quick Cab',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
