@@ -14,7 +14,8 @@ class HomePage extends StatefulWidget {
 }
 
 List<String> helo = [
-  "https://cdn-icons-png.flaticon.com/128/3845/3845861.png", //cab
+  "https://cdn-icons-png.flaticon.com/128/3845/3845861.png",
+  "https://cdn-icons-png.flaticon.com/128/3845/3845861.png",
   "https://cdn-icons-png.flaticon.com/128/3845/3845861.png", //cab
   "https://cdn-icons-png.flaticon.com/128/906/906208.png", //restuarants
   "https://cdn-icons-png.flaticon.com/128/906/906208.png", //restuarants
