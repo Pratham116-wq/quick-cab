@@ -23,9 +23,9 @@ List<String> helo = [
 ];
 
 List<String> title = [
-  "Cab ",
+  "Cab",
   "Restuarants",
-  "trailing",
+  "trend",
   "Hotels ",
   "Salon",
   "Plumber",
