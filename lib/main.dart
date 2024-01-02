@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
       getPages: AppPages.routes,
       initialRoute: AppPages.INITIAL_ROUTE,
       debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
+      title: 'Quick Tab',
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
         useMaterial3: true,
