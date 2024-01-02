@@ -15,15 +15,16 @@ class HomePage extends StatefulWidget {
 
 List<String> Tab_icons = [
 
-  "https://cdn-icons-png.flaticon.com/128/3845/3845861.png", //cab
-  "https://cdn-icons-png.flaticon.com/128/906/906208.png", //restuarants
-  "https://cdn-icons-png.flaticon.com/128/8583/8583104.png",
-  "https://cdn-icons-png.flaticon.com/128/3845/3845861.png", //cab
-  "https://cdn-icons-png.flaticon.com/128/906/906208.png", //restuarants
-  "https://cdn-icons-png.flaticon.com/128/8583/8583104.png",
-  "https://cdn-icons-png.flaticon.com/128/3845/3845861.png",
-  "https://cdn-icons-png.flaticon.com/128/906/906208.png",
-  "https://cdn-icons-png.flaticon.com/128/8583/8583104.png",
+  "assets/images/towing.jpg",
+  "assets/images/cabimage.jpg",
+  "assets/images/cabimage.jpg",
+  "assets/images/cabimage.jpg",
+  "assets/images/cabimage.jpg",
+  "assets/images/cabimage.jpg",
+  "assets/images/cabimage.jpg",
+  "assets/images/cabimage.jpg",
+  "assets/images/ambulance.jpg",
+
 ];
 
 List<String> title = [
