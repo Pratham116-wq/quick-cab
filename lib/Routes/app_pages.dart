@@ -16,7 +16,7 @@ import 'package:get/get.dart';
 import '../Screens/Grid_Tab_Screens/restuarants.dart';
 
 class AppPages {
-  static const INITIAL_ROUTE = Routes.REGISTRATION_PAGE;
+  static const INITIAL_ROUTE = Routes.HOME_PAGE;
 
   static final routes = [
     GetPage(name: Routes.SPLASH_SCREEN, page: () => SplashScreen()),
