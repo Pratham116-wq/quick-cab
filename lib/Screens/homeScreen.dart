@@ -141,47 +141,60 @@ class _HomePageState extends State<HomePage> {
           ),
         ),
         child: Container(
+
             child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 18.0),
+          padding: const EdgeInsets.symmetric(horizontal: 1.0),
           child: GridView.builder(
               gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
                   maxCrossAxisExtent: width / 2,
                   childAspectRatio: 1.5 / 1.5,
                   crossAxisSpacing: 14,
                   mainAxisSpacing: 20),
-              itemCount: title.length,
+              itemCount: Tab_icons.length,
               itemBuilder: (BuildContext context, index) {
                 return InkWell(
                   onTap: () {
                     controller.navigateToTab(index);
                   },
-                  child: Container(
-                    alignment: Alignment.center,
-                    decoration: BoxDecoration(
-                        gradient: const LinearGradient(
-                            begin: Alignment.centerLeft,
-                            colors: [
-                              Colors.deepOrange,
-                              Colors.orange,
-                              Colors.amber
-                            ]),
-                        borderRadius: BorderRadius.circular(22)),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.end,
-                      children: [
-                        Image.network(
-                          helo[index],
-                          fit: BoxFit.cover,
-                        ),
-                        Text(
-                          title[index],
-                          style: const TextStyle(
-                              fontSize: 23,
-                              fontWeight: FontWeight.w700,
-                              fontStyle: FontStyle.italic,
-                              color: Colors.white),
-                        ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                    child: Container(
+                      alignment: Alignment.center,
+                      decoration: BoxDecoration(
+                          gradient: const LinearGradient(
+                              begin: Alignment.centerLeft,
+                              colors: [
+                                Colors.deepOrange,
+                                Colors.orange,
+                                Colors.amber
+                              ]),
+
+                          boxShadow: [
+                      BoxShadow(
+                      color: Colors.orange,
+                      spreadRadius: 1,
+                      blurRadius: 18,
+                      offset: Offset(3, 3),
+                    ),
                       ],
+                          borderRadius: BorderRadius.circular(22)),
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        children: [
+                          Image.asset(
+                            Tab_icons[index],
+                            fit: BoxFit.cover,
+                          ),
+                          Text(
+                            title[index],
+                            style: const TextStyle(
+                                fontSize: 23,
+                                fontWeight: FontWeight.w700,
+                                fontStyle: FontStyle.italic,
+                                color: Colors.white),
+                          ),
+                        ],
+                      ),
                     ),
                   ),
                 );
