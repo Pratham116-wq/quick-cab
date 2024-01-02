@@ -54,7 +54,7 @@ class _HomePageState extends State<HomePage> {
         key: _scaffoldKey,
         appBar: const SliderAppBar(
             appBarColor: Colors.white,
-            title: Text("Cab Tab",
+            title: Text("Quick Cab",
                 style: TextStyle(fontSize: 22, fontWeight: FontWeight.w700))),
         slider: Container(
           child: Column(
