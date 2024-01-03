@@ -5,6 +5,7 @@ import 'package:get/get.dart';
 import 'package:get/get_core/src/get_main.dart';
 import 'package:percent_indicator/circular_percent_indicator.dart';
 import '../Controllers/home_page_controller.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
@@ -14,7 +15,6 @@ class HomePage extends StatefulWidget {
 }
 
 List<String> Tab_icons = [
-
   "assets/images/towing.jpg",
   "assets/images/cabimage.jpg",
   "assets/images/cabimage.jpg",
@@ -37,7 +37,6 @@ List<String> title = [
   "Drivers",
   "Fuels",
   "Hospitals",
-
 ];
 
 class _HomePageState extends State<HomePage> {
@@ -59,6 +58,9 @@ class _HomePageState extends State<HomePage> {
         slider: Container(
           child: Column(
             children: [
+
+
+
               Container(
                 height: height * 0.23,
                 width: width * 1.0,
@@ -140,66 +142,87 @@ class _HomePageState extends State<HomePage> {
             ],
           ),
         ),
-        child: Container(
-
-            child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 1.0),
-          child: GridView.builder(
-              gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
-                  maxCrossAxisExtent: width / 2,
-                  childAspectRatio: 1.5 / 1.5,
-                  crossAxisSpacing: 14,
-                  mainAxisSpacing: 20),
-              itemCount: Tab_icons.length,
-              itemBuilder: (BuildContext context, index) {
-                return InkWell(
-                  onTap: () {
-                    controller.navigateToTab(index);
-                  },
-                  child: Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 14.0),
-                    child: Container(
-                      alignment: Alignment.center,
-                      decoration: BoxDecoration(
-                          gradient: const LinearGradient(
-                              begin: Alignment.centerLeft,
-                              colors: [
-                                Colors.deepOrange,
-                                Colors.orange,
-                                Colors.amber
-                              ]),
-
-                          boxShadow: [
-                      BoxShadow(
-                      color: Colors.orange,
-                      spreadRadius: 1,
-                      blurRadius: 18,
-                      offset: Offset(3, 3),
-                    ),
-                      ],
-                          borderRadius: BorderRadius.circular(22)),
-                      child: Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        children: [
-                          Image.asset(
-                            Tab_icons[index],
-                            fit: BoxFit.cover,
-                          ),
-                          Text(
-                            title[index],
-                            style: const TextStyle(
-                                fontSize: 23,
-                                fontWeight: FontWeight.w700,
-                                fontStyle: FontStyle.italic,
-                                color: Colors.white),
-                          ),
-                        ],
-                      ),
+        child: Column(
+          children: [
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Container(
+                height: 70, // Set your desired height
+                child: AdWidget(
+                  ad: BannerAd(
+                    adUnitId: 'your_banner_ad_unit_id',
+                    request: AdRequest(),
+                    size: AdSize.banner,
+                    listener: BannerAdListener(
+                      onAdFailedToLoad: (Ad ad, LoadAdError error) {
+                        ad.dispose();
+                      },
                     ),
                   ),
-                );
-              }),
-        )),
+                ),
+              ),
+            ),
+            Expanded(
+              child: Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 1.0),
+                            child: GridView.builder(
+                gridDelegate: SliverGridDelegateWithMaxCrossAxisExtent(
+                    maxCrossAxisExtent: width / 2,
+                    childAspectRatio: 1.5 / 1.5,
+                    crossAxisSpacing: 14,
+                    mainAxisSpacing: 20),
+                itemCount: Tab_icons.length,
+                itemBuilder: (BuildContext context, index) {
+                  return InkWell(
+                    onTap: () {
+                      controller.navigateToTab(index);
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.symmetric(horizontal: 14.0),
+                      child: Container(
+                        alignment: Alignment.center,
+                        decoration: BoxDecoration(
+                            gradient: const LinearGradient(
+                                begin: Alignment.centerLeft,
+                                colors: [
+                                  Colors.deepOrange,
+                                  Colors.orange,
+                                  Colors.amber
+                                ]),
+                            boxShadow: [
+                        BoxShadow(
+                        color: Colors.orange,
+                        spreadRadius: 1,
+                        blurRadius: 18,
+                        offset: Offset(3, 3),
+                      ),
+                        ],
+                            borderRadius: BorderRadius.circular(22)),
+                        child: Column(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            Image.asset(
+                              Tab_icons[index],
+                              fit: BoxFit.cover,
+                            ),
+                            Text(
+                              title[index],
+                              style: const TextStyle(
+                                  fontSize: 23,
+                                  fontWeight: FontWeight.w700,
+                                  fontStyle: FontStyle.italic,
+                                  color: Colors.white),
+                            ),
+                          ],
+                        ),
+                      ),
+                    ),
+                  );
+                }),
+                          ),
+            ),
+          ],
+        ),
       ),
     );
   }
