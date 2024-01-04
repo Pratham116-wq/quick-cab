@@ -3,7 +3,14 @@ class Assets {
   Assets._();
 
   static const String animationsSplashscreen = 'assets/animations/splashscreen.json';
-  static const String imagesAmbulance = 'assets/images/ambulance.jpg';
+  static const String fontsHeading = 'assets/fonts/heading.ttf';
+  static const String fontsQuickgreen = 'assets/fonts/quickgreen.ttf';
+  static const String imagesCab = 'assets/images/cab.png';
   static const String imagesCabimage = 'assets/images/cabimage.jpg';
+  static const String imagesHotels = 'assets/images/hotels.png';
+  static const String imagesPngOne = 'assets/images/png_one.png';
+  static const String imagesPnggtestOne = 'assets/images/pnggtest_one.png';
+  static const String imagesPuncture = 'assets/images/puncture.png';
+  static const String imagesTowing = 'assets/images/towing.jpg';
 
 }

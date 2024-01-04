@@ -1,4 +1,3 @@
-import 'package:cab_tab/Screens/registeration_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:lottie/lottie.dart';
@@ -14,7 +13,7 @@ class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
-    Future.delayed(Duration(milliseconds: 4000), () {
+    Future.delayed(Duration(seconds: 4), () {
       Get.toNamed(Routes.REGISTRATION_PAGE);
     });
   }

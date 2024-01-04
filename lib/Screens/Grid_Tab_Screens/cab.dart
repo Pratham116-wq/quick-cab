@@ -13,29 +13,10 @@ class CabTab extends StatefulWidget {
 class _CabTabState extends State<CabTab> {
   @override
   Widget build(BuildContext context) {
-    return
-      Scaffold(
-        body: Container(
-          child:
-          RoundedTabbarWidget(
-          tabIcons: [
-            Icons.home,
-            Icons.home,
-            Icons.chat,
-            Icons.person,
-          ],
-          pages: [
-            LoginPage(),
-            LoginPage(),
-            VerifyOtp(),
-            LoginPage()
-          ],
-          selectedIndex: 0,
-          onTabItemIndexChanged: (int index) {
-            print('Index: $index');
-          },
-              ),
-        ),
-      );
+    return Scaffold(
+      body: Container(
+
+      ),
+    );
   }
 }
